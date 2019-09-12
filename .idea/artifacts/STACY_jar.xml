@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="STACY:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/STACY_jar</output-path>
+    <root id="archive" name="STACY.jar">
+      <element id="module-output" name="STACY" />
+    </root>
+  </artifact>
+</component>

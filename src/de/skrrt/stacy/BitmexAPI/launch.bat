@@ -1,0 +1,1 @@
+src\de\skrrt\stacy\BitmexAPI\venv\Scripts\python.exe src\de\skrrt\stacy\BitmexAPI\core\Launcher.py

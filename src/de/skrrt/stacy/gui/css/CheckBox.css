@@ -1,0 +1,14 @@
+.check-box:selected > .box {
+    /* background color for selected checkbox */
+    -fx-background-color: transparent;
+}
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color: transparent;
+    -fx-border-color: #969696;
+}
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color: #00a1ff;
+}

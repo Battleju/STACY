@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1800.0" style="-fx-background-color: #313235;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.skrrt.stacy.gui.mainScreen.MainController">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="570.0" fitWidth="760.0" />
+      <Label layoutX="578.0" layoutY="80.0" text="actual price:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lActualPrice" layoutX="671.0" layoutY="80.0" text="000000" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="140.0" layoutX="620.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Line endX="760.0" layoutY="70.0" stroke="#00a1ff" />
+      <Label fx:id="lAsset" layoutX="20.0" layoutY="80.0" text="BITCOIN">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5333333333333333" endY="0.3761904761904762" startX="0.5238095238095238" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Line endX="760.0" layoutY="115.0" stroke="#222325" />
+      <Button layoutX="528.0" layoutY="373.0" mnemonicParsing="false" onAction="#longOrder" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #90c444;" text="Buy / Long" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font></Button>
+      <Button layoutX="640.0" layoutY="373.0" mnemonicParsing="false" onAction="#shortOrder" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #ff4242;" text="Sell / Short" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font></Button>
+      <TextField fx:id="tfQty" layoutX="353.0" layoutY="243.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" promptText="Quantity" stylesheets="@../css/tableview.css" text="0" />
+      <Label layoutX="396.0" layoutY="131.0" text="Leverage" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="bLev1" layoutX="340.0" layoutY="157.0" mnemonicParsing="false" onAction="#setLev1" prefWidth="35.0" stylesheets="@../css/LeftButton.css" text="1" />
+      <Button fx:id="bLev2" layoutX="375.0" layoutY="157.0" mnemonicParsing="false" onAction="#setLev2" prefWidth="35.0" stylesheets="@../css/MiddleButton.css" text="5" />
+      <Button fx:id="bLev3" layoutX="410.0" layoutY="157.0" mnemonicParsing="false" onAction="#setLev3" prefWidth="35.0" stylesheets="@../css/MiddleButton.css" text="10" />
+      <Button fx:id="bLev5" layoutX="480.0" layoutY="157.0" mnemonicParsing="false" onAction="#setLev5" prefWidth="35.0" stylesheets="@../css/RightButton.css" text="50" />
+      <Label layoutX="397.0" layoutY="216.0" text="Quantity" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cbSL" layoutX="602.0" layoutY="219.0" mnemonicParsing="false" onAction="#checkManualSL" stylesheets="@../css/CheckBox.css" text="manual Stop-Loss" textFill="WHITE" />
+      <TextField fx:id="tfStopLoss" layoutX="585.0" layoutY="243.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" promptText="Stop Loss" style="-fx-border-color: #969696; -fx-background-color: transparent; -fx-text-fill: #00a1ff;" stylesheets="@../css/tableview.css" text="0" />
+      <Label layoutX="578.0" layoutY="131.0" prefHeight="25.0" prefWidth="165.0" text="S.L. Risk Management" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="bRisk1" layoutX="602.0" layoutY="157.0" mnemonicParsing="false" onAction="#setRisk1" onMousePressed="#updateValues" onMouseReleased="#updateValues" stylesheets="@../css/LeftButton.css" text="1%" />
+      <Button fx:id="bRisk2" layoutX="641.0" layoutY="157.0" mnemonicParsing="false" onAction="#setRisk2" onMousePressed="#updateValues" onMouseReleased="#updateValues" stylesheets="@../css/MiddleButton.css" text="2%" />
+      <Button fx:id="bRrisk3" layoutX="680.0" layoutY="157.0" mnemonicParsing="false" onAction="#setRisk3" onMousePressed="#updateValues" onMouseReleased="#updateValues" stylesheets="@../css/RightButton.css" text="3%" />
+      <Button fx:id="bBTC" layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onAction="#setBTC" prefWidth="120.0" stylesheets="@../css/tableview.css" text="BTC" textFill="#00a1ff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="bEth" layoutX="220.0" layoutY="18.0" mnemonicParsing="false" onAction="#setEth" prefWidth="120.0" stylesheets="@../css/tableview.css" text="Etherium" textFill="#00a1ff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="bRip" layoutX="390.0" layoutY="18.0" mnemonicParsing="false" onAction="#setRip" prefWidth="120.0" stylesheets="@../css/tableview.css" text="Ripple">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="bLev4" layoutX="445.0" layoutY="157.0" mnemonicParsing="false" onAction="#setLev4" prefWidth="35.0" stylesheets="@../css/MiddleButton.css" text="25" />
+      <Button fx:id="bMarket" layoutX="20.0" layoutY="140.0" mnemonicParsing="false" onAction="#setMarket" stylesheets="@../css/TabPane.css" text="Market" />
+      <Button fx:id="bLimit" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#setLimit" stylesheets="@../css/TabPane.css" text="Limit" />
+      <Button fx:id="bConditional" layoutX="20.0" layoutY="240.0" mnemonicParsing="false" onAction="#setbConditional" stylesheets="@../css/TabPane.css" text="Conditional" />
+      <TextField fx:id="tfLimit" layoutX="145.0" layoutY="156.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" promptText="Limit" stylesheets="@../css/tableview.css" />
+      <TextField fx:id="tfCon" layoutX="145.0" layoutY="243.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" promptText="Conditional" style="-fx-border-radius: 3;" stylesheets="@../css/tableview.css" />
+      <Label layoutX="183.0" layoutY="131.0" text="Limit Price" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="216.0" text="Trigger Price" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="623.0" layoutY="288.0" text="Take Profit" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTakeProfit" layoutX="585.0" layoutY="313.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" stylesheets="@../css/tableview.css" />
+      <TableView fx:id="tablePositions" layoutX="10.0" layoutY="420.0" onMouseClicked="#changeTrigger" prefHeight="140.0" prefWidth="740.0" stylesheets="@../css/tableview.css">
+        <columns>
+          <TableColumn prefWidth="92.0" text="Symbol" />
+          <TableColumn prefWidth="92.0" text="Quantity" />
+            <TableColumn prefWidth="92.0" text="Markt Price" />
+            <TableColumn prefWidth="92.0" text="Liq. Price" />
+            <TableColumn prefWidth="92.0" text="Margin" />
+            <TableColumn prefWidth="92.0" text="approx. PnL" />
+            <TableColumn prefWidth="92.0" text="StoppLoss" />
+            <TableColumn prefWidth="92.0" text="Take Profit" />
+        </columns>
+      </TableView>
+      <TabPane layoutX="20.0" layoutY="298.0" prefHeight="117.0" prefWidth="487.0" stylesheets="@../css/TabPane.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Long">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="98.0" prefWidth="423.0" style="-fx-background-color: #222325;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Risk Management" textFill="#90c444">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfLTarget" layoutX="14.0" layoutY="59.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" stylesheets="@../css/tableview.css" text="0" />
+                        <Label layoutX="14.0" layoutY="37.0" text="Target" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="59.0" text="Loss Value:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="17.0" text="Win Value:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="37.0" text="Risk/Reward Ratio:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lLWV" layoutX="372.0" layoutY="17.0" text="000¥" textFill="#90c444">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lLLV" layoutX="372.0" layoutY="59.0" text="000¥" textFill="#ff4242">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lLWP" layoutX="427.0" layoutY="17.0" text="00%" textFill="#90c444">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lLLP" layoutX="427.0" layoutY="59.0" text="00%" textFill="#ff4242">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lLRR" layoutX="427.0" layoutY="37.0" text="00" textFill="#90c444">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Short">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="98.0" prefWidth="423.0" style="-fx-background-color: #222325;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Risk Management" textFill="#ff4242">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfSTarget" layoutX="14.0" layoutY="59.0" onKeyPressed="#updateValues" onKeyReleased="#updateValues" onKeyTyped="#updateValues" stylesheets="@../css/tableview.css" text="0" />
+                        <Label layoutX="14.0" layoutY="37.0" text="Target" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="59.0" text="Loss Value:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="17.0" text="Win Value:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="37.0" text="Risk/Reward Ratio:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lSWV" layoutX="372.0" layoutY="17.0" text="000¥" textFill="#90c444">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lSLV" layoutX="372.0" layoutY="59.0" text="000¥" textFill="#ff4242">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lSWP" layoutX="427.0" layoutY="17.0" text="00%" textFill="#90c444">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lSLP" layoutX="427.0" layoutY="59.0" text="00%" textFill="#ff4242">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lSRR" layoutX="427.0" layoutY="37.0" text="00" textFill="#90c444">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

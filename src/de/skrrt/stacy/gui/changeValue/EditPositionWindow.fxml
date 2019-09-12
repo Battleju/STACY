@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="170.0" prefWidth="350.0" style="-fx-background-color: #313235;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.skrrt.stacy.gui.changeValue.EditPositionController">
+   <children>
+      <Label fx:id="lAsset" layoutX="122.0" layoutY="14.0" text="Edit Position">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5142857142857143" endY="0.2523809523809524" startX="0.5142857142857143" startY="0.9428571428571428">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="10.0" layoutY="62.0" prefHeight="25.0" prefWidth="72.0" text="StopLoss" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="64.0" prefHeight="25.0" prefWidth="72.0" text="TakeProfit" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfStopLoss" layoutX="8.0" layoutY="92.0" stylesheets="@../css/Textfield.css" />
+      <TextField fx:id="tfTakeProfit" layoutX="191.0" layoutY="92.0" stylesheets="@../css/Textfield.css" />
+      <ToggleButton fx:id="tbStopLoss" layoutX="138.0" layoutY="61.0" mnemonicParsing="false" onAction="#toggleSL" stylesheets="@../css/ToggleButtonLeft.css" text="      " />
+      <ToggleButton fx:id="tbTakeProfit" layoutX="176.0" layoutY="61.0" mnemonicParsing="false" onAction="#toggleTP" stylesheets="@../css/ToggleButtonRight.css" text="      " />
+      <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#setChanges" stylesheets="@../css/buttonOrderType.css" text="OK" />
+      <Button layoutX="266.0" layoutY="130.0" mnemonicParsing="false" onAction="#closeStage" stylesheets="@../css/buttonOrderType.css" text="Cancel" />
+      <Button layoutX="110.0" layoutY="130.0" mnemonicParsing="false" onAction="#closePosition" stylesheets="@../css/buttonOrderType.css" text="Close Position" textFill="WHITE" />
+   </children>
+</AnchorPane>

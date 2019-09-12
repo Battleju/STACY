@@ -1,0 +1,6 @@
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #969696;
+    -fx-text-fill:  #00a1ff;
+    -fx-border-radius: 3;
+}

@@ -375,6 +375,10 @@ public class MainController {
         }
     }
 
+    public void showStacyAnalytics(){
+        main.getStacyAnalyics().showStage();
+    }
+
     public TableView getTablePositions() {
         return tablePositions;
     }

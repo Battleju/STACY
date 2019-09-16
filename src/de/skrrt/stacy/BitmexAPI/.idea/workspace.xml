@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b05ee32f-efdf-4bff-afb9-a302b81c4ccb" name="Default Changelist" comment="" />
+    <list default="true" id="b05ee32f-efdf-4bff-afb9-a302b81c4ccb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/libraries/jfreechart_1_6_0_snapshot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/libraries/jfreechart_fx_1_0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/libraries/org_jfree_fxgraphics2d_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gui/stacyAnalytics/MouseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gui/stacyAnalytics/StacyAnalyics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gui/stacyAnalytics/StacyAnalyticsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gui/stacyAnalytics/StacyAnalyticsWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../STACY.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../STACY.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/bitmexAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/bitmexAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eth.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openOrders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/openOrders.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/position.txt" beforeDir="false" afterPath="$PROJECT_DIR$/position.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xbt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/xbt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xrp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/xrp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/mainScreen/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/mainScreen/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/mainScreen/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/mainScreen/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/mainScreen/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/mainScreen/MainWindow.fxml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +43,9 @@
         <entry file="file://$PROJECT_DIR$/core/bitmexAPI.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+              <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,6 +78,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -68,17 +91,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1768" />
-    <option name="y" value="84" />
+    <option name="x" value="-64" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,9 +118,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -186,21 +211,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="84" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49841937" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4947313" visible="true" weight="0.16143012" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49367756" visible="true" weight="0.16143012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5052687" side_tool="true" visible="true" weight="0.16143012" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50632244" side_tool="true" visible="true" weight="0.16143012" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -254,9 +280,9 @@
     <entry file="file://$PROJECT_DIR$/core/bitmexAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

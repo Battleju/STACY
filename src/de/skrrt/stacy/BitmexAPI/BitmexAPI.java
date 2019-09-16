@@ -159,6 +159,39 @@ public class BitmexAPI {
         return zeile;
     }
 
+    public float[] getChart(){
+        BufferedReader in = null;
+        ArrayList<String> sChart = new ArrayList<>();
+        try {
+            in = new BufferedReader(new FileReader("src/de/skrrt/stacy/BitmexAPI/chart.txt"));
+            String zeile = "api error";
+            do
+            {
+                zeile = in.readLine();
+                sChart.add(zeile);
+            }
+            while (zeile != null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (in != null)
+                try {
+                    in.close();
+                } catch (IOException e) {
+                }
+        }
+        for (int i = 0; i < sChart.size(); i++){
+            if(sChart.get(i) == null){
+                sChart.remove(i);
+            }
+        }
+        float[] chart = new float[sChart.size()];
+        for (int i = 0; i < chart.length; i++){
+                chart[i] = Float.parseFloat(sChart.get(i));
+        }
+        return chart;
+    }
+
     //--------------------------------------------------position-management----------------------------------------------
 
     public ArrayList getPositions(){

@@ -4,6 +4,7 @@ import de.skrrt.stacy.core.Bot;
 import de.skrrt.stacy.core.Position;
 import de.skrrt.stacy.gui.changeValue.EditPositionController;
 import de.skrrt.stacy.gui.changeValue.EditPositionLoader;
+import de.skrrt.stacy.gui.stacyAnalytics.StacyAnalyics;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -34,6 +35,7 @@ public class Main extends Application {
     private Stage primaryStage;
     private ObservableList<Position> positions;
     private Bot bot;
+    private StacyAnalyics stacyAnalyics;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -43,14 +45,11 @@ public class Main extends Application {
         primaryStage.setTitle("S.T.A.C.Y. - You Can Actually Trade the System");
         mainController = loader.getController();
         mainController.setMain(this);
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent t) {
-                Platform.exit();
-                System.exit(0);
-            }
+        primaryStage.setOnCloseRequest(t -> {
+            Platform.exit();
+            System.exit(0);
         });
-        primaryStage.setScene(new Scene(root, 760, 570));
+        primaryStage.setScene(new Scene(root, 1728, 972));
 
         //Loading loadingScene = new Loading(this, (AnchorPane)root);
         //loadingScene.execute();
@@ -65,6 +64,7 @@ public class Main extends Application {
 
     private void initSTACY(){
         bot = new Bot(this);
+        stacyAnalyics = new StacyAnalyics(this);
 
         //Table init
         positions = FXCollections.observableArrayList();
@@ -161,5 +161,9 @@ public class Main extends Application {
 
     public MainController getMainController() {
         return mainController;
+    }
+
+    public StacyAnalyics getStacyAnalyics() {
+        return stacyAnalyics;
     }
 }

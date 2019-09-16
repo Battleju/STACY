@@ -1,3 +1,4 @@
+import datetime
 import threading
 
 import requests, json
@@ -31,11 +32,11 @@ class API:
             api_secret = '4rDo-sVCMzUAnXmWOmEud7qMgAZn-ANBfRdFfz1lClDHIdue'
             client = bitmex(test=True, api_key=api_key, api_secret=api_secret)
 
+        # self.testcharthistory(client)
         # self.testbuy(client=client)
         # self.testpos(client)
         # self.testopenorder(client)
         # self.testcancelOrder(client)
-
 
 
         def updatePrices(running=True):
@@ -57,6 +58,15 @@ class API:
                     file3 = open("src/de/skrrt/stacy/BitmexAPI/eth.txt", "w")
                     file3.write(str(eth[0]['price']))
                     file3.close()
+
+                    file4 = open("src/de/skrrt/stacy/BitmexAPI/chart.txt", "w")
+                    chart = requests.get(
+                        "https://www.bitmex.com/api/v1/trade/bucketed?binSize=1m&partial=false&symbol=xbt&count=600&reverse=false&reverse=true").json()
+                    x = len(chart)
+                    i = 0
+                    while i < x:
+                        file4.write(str(chart[i]['close']) + '\n')
+                        i += 1
 
                 except KeyError:
                     print("Rate Limit exceeded")
@@ -383,3 +393,11 @@ class API:
 
     def testcancelOrder(self, client):
         client.Order.Order_cancel(orderID="8a0c036a-52be-ce7c-11e9-4b4c95af2ac1").result()
+
+    def testcharthistory(self, client):
+        chart = requests.get("https://www.bitmex.com/api/v1/trade/bucketed?binSize=1m&partial=false&symbol=xbt&count=600&reverse=false&reverse=true").json()
+        x = len(chart)
+        i = 0
+        while i < x:
+            print(chart[i]['close'])
+            i += 1
